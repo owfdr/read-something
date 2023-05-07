@@ -127,6 +127,15 @@ May 6, 2023     Log
 --
 ```
 
+- comparison
+- branching
+- looping
+- logic
+- `>` | `<`
+- `>=` | `<=`
+- `==` | `!=`
+- Capital `<` lowercase
+
 ## Chapter 7 Arrays and Iterators
 
 ```text
