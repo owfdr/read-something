@@ -9,7 +9,7 @@ End:    2023/05/08 4:47
 ```
 
 - stay out of yor way
-- instance method | `Fred#do_something
+- instance method | Fred#do_something
 - class method | Fred.new | ~~Fred::new~~
 
 ## 1. Getting Started
@@ -37,19 +37,17 @@ End:    2023/05/08 6:09
 ```text
 Page:   17-31
 Set:    2023/05/08 15:09
-End:
+End:    2023/05/08 17:18
 ```
 
 1.
 
-- ruby | object oriented
-- combine | data + logic | p17 | ✨
-- all types | object
-- object identifier | `object_id`
-- unique | instance variable
+- object oriented programming language
+- object | combines data with logic that manipulates ... | p17 | ✨
+- all types are objects | `object_id`
 - receiver | .method_name
 - message | send to object | Smalltalk
-- ruby | pure | no basic types
+- no basic types | pure
 
 2.
 
@@ -61,7 +59,7 @@ End:
 - | substitution sequence | `\n`
 - | expression interpolation | `#{}` | arbitrary complex
 - `return` || last expression | evaluated
-- idiomatic | expert programmer | standard ruby
+- idiomatic | expert | standard ruby
 
 3.
 
@@ -78,31 +76,30 @@ End:
 
 4.
 
-- object to collection | array || hash
 - array | linear list
 - hash | key/value store | association
-- can hold | different types
-- array literal | `[]` | create | array object
-- hash literal | `{}`| create | hash object
+- can hold different types
+- array literal | `[]` | create array object
+- hash literal | `{}` | create hash object
 - `nil` | is an object | `nil == nil`
-- hash | unique key| order preserved
-- default value | `Hash.new()`
+- hash | key unique | order preserved
+- set default value | `Hash.new(0)`
 
 5.
 
-- symbol | immutable | fast | key || identifier
+- symbol | immutable | fast
 - string | data
 - symbol literal | `:name`
-- value | equivalent to | name
-- used in | hash | key
-- shortcut | `{ key: value }` | added for | JavaScript, Python user
+- value | equivalent to name
+- used in hash (key)
+- `{ key: value }` | added for JavaScript, Python user
 
 6.
 
 - `if` | `elsif` | `else` | `end`
 - `while` | `end`
 - most statement | expression | return value
-- `while(line = gets)` | use as condition
+- `while(line = gets)` | can use as condition
 - EOF | `nil` | false
 - statement modifier | `if` | `unless` | `while` | `until`
 - `if` | guard clause
@@ -118,7 +115,7 @@ End:
 - | `\d` | any digit
 - | `\w` | any word character
 - | `.` | almost | any character
-- `=~` | match operator | return | start index
+- `=~` | match operator | return start index
 - `.match?` | synonymous | more common | boolean
 - `sub` | replace first
 - `gsub`  | replace all | (global substitution)
