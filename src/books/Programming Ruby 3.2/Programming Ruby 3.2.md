@@ -147,3 +147,58 @@ End:
 - `#` | singleline comment
 - `=begin` `=end` | multiline comment | rare
 - `# frozen_string_literal: true` | magic comment
+
+## 3. Classes, Objects, and Variables
+
+```text
+Page:   33-51
+Set:    2023/05/09 6:34
+End:    2023/05/09 10:04
+```
+
+- more flexible
+- everything | object
+- instantiate | directly | indirectly
+
+1.
+
+- `.new` | memory | uninitialized
+- call | `initialize` | setup
+- `@` | instance variable
+- `p` | `inspect` | internal representation
+
+2.
+
+- attribute | externally visible facet
+- accessor method | `def` `@` `end`
+- `attr_reader` | shortcut | symbol
+- update method | `def` `=()` `end`
+- `attr_writer` | shortcut | rare
+- `attr_accessor` | shortcut | combined
+- hiding the difference | Uniform Access Principle
+- attribute | method | expose | internal state
+
+3.
+
+- `<<` | left shift operator | append
+- `require` | standard library
+- `require_relative` | external file
+- `CSV` | `ARGV`
+
+4.
+
+- coupling | degree of interdependence
+- access control | at run time
+- `public` | `protected` | `private`
+- method | not keyword
+
+5.
+
+- variable | reference to object
+- `class` | `object_id`
+- `dup` | `freeze`
+
+6.
+
+- reopen classes | monkey-patching
+- refinement
