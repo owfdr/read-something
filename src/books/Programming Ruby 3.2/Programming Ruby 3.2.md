@@ -199,3 +199,123 @@ End:    2023/05/09 10:04
 
 - reopen classes | monkey-patching
 - refinement
+
+## 4. Collections, Blocks, and Iterators
+
+```text
+Page:   53-83
+Set:    2023/05/09 10:52
+End:    2023/05/10 9:47
+```
+
+- effective ruby programmer | master array and hash
+- collection + block | powerful iterator
+
+1.
+
+- `-1` | negative integer | counts form the end
+- `..` | `...`
+- any gap wil be filled with `nil`
+- `[]` operator | implemented as method
+- `[start, length]`
+- `length = 0` | insert before start
+- `length = 1` | replace element at start
+- `[1, 2, 3]` | elements are inserted individually
+- `1, 2, 3` | can also be used in replacement
+- `[from..to]` | range is also allowed
+- `%w` | `%i`
+- stack | `push` | `pop`
+- FIFO queue | `push` | `shift`
+
+2.
+
+- hash | associative array | map | dictionary
+- keys are hashed | hashing function
+- `=>` | hash rocket
+- `{name:, age:}` | shortcut
+- advantage | use object as index | remembers the order
+
+3.
+
+- `dig` | returns nill instead of an expiation
+
+4.
+
+- word frequency | array + hash
+- `sort_by`
+- `reverse_each`
+- `minitest/autorun` | `Minitest::Test`
+- `tally`
+
+5.
+
+- `each` | iterator | invokes a block of code repeatedly
+- `map` | enumerator method | returns a new array
+- `tap` | for debugging
+
+6.
+
+- `{}` | one line
+- `do` `end` | multiple lines
+- `|value; local|` | block-local variable | rare
+- `_1` | first argument | shortcut
+
+7.
+
+- binding | execution context
+- `yield` | transfer control to another block
+- using `each` to implement | `find` | `map`
+- `with_index` | can chain to any iterator method
+- `reduce` | `:+` | `:*`
+
+8.
+
+- transaction
+- `block_given`
+
+9.
+
+- block can be stored as object in variable
+- `&` | convert block to `Proc`  || convert `Proc` to block
+- `call` | invoke proc
+- `lambda`
+- `->` | stabby lambda | shortcut
+- `proc`
+- `Proc.new` | current preferred style
+- lambda return error if number of arguments is wrong
+- proc truncate or pad with `nil`
+- using return in proc will also return from the caller
+- using return in lambda will not
+
+10.
+
+- block is closure
+- `->` | ASCII | `λ`
+- `(arg)` | optional
+
+11.
+
+- external iterator
+- `Enumerator` | class
+- `Enumerable` | mixin
+- `to_enum` | `enum_for` | create Enumerator object
+- `each` | default | can use other method
+- `next` | access next element
+- most iterator returns Enumerator if no block is given
+- `loop` | repeatedly invoke block
+- smart when used with Enumerator
+
+12.
+
+- enumerators are objects
+- `each_char`
+- `each_with_index` |`with_index`
+- `to_a`
+
+13.
+
+- enumerators can be used as generators | filters
+- `Enumerator.new` | `|yielder|`
+- `Enumerator.produce` | simplify
+- careful with infinite sequences | `count` | `select`
+- `Enumerator::lazy` | lazy evaluation | `take` | `first`
