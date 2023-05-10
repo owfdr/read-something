@@ -319,3 +319,51 @@ End:    2023/05/10 9:47
 - `Enumerator.produce` | simplify
 - careful with infinite sequences | `count` | `select`
 - `Enumerator::lazy` | lazy evaluation | `take` | `first`
+
+## 5. More About Methods
+
+```text
+Page:   85-99
+Set:    2023/05/10 16:37
+End:    2023/05/10 19:28
+```
+
+### 1. Defining a Method
+
+- `def` | keyword | return symbol
+- redefine method | can be dangerous
+- endless method | `() =`
+- no body method | `; end`
+- capitalized method name | `Kernel` module | `Integer`
+- can end with `?` `!` `=`
+- `?` return boolean result | predicate methods
+- `!` will modify receiver | bang methods | often pared with safe version
+- `=` used for assignment
+- set of operators can be overridden | `+`
+- define method for specific object | `def self.method` | `def object.method`
+- omit `()` no args | otherwise use `()`
+- `=` | default value | can reference previous args
+- `*` | splat | can omit name when passing | can put in-between | only one
+- keyword parameter | must after positional parameters
+- `**` | double splat | for keyword arguments
+- `**nil` | no keyword arguments || `*` may pull them in as hash
+- `options = {}` | arbitrary hash parameters | deprecated
+- `&` | convert bloc to proc | can omit name when passing
+- `...` | roll all arguments | for passing
+
+### 2. Calling a Method
+
+- can omit receiver if default is `self`
+- `value=` prefer create local variable in ambiguity
+- method call without parenthesis | commands
+- positional arguments | must be in order
+- keyword arguments | any order
+- every method returns value
+- omit `return` if not needed | idiomatic
+- return multiple statements will become an array | parallel assignment
+- `*` can also expand object into arguments | `to_a`
+- `**` can also expand object into block | `to_h`
+- splat and argument can intermix
+- shortcut access syntax
+- `&` can also convert object (proc) into block | `to_proc`
+- `Symbol` implements `to_proc` | `map(&:uppercase)`
