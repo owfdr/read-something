@@ -85,14 +85,15 @@ End:    2023/05/08 17:18
 - hash | key unique | order preserved
 - set default value | `Hash.new(0)`
 
-5.
+### 4. Symbols
 
-- symbol | immutable | fast
-- string | data
-- symbol literal | `:name`
-- value | equivalent to name
-- used in hash (key)
-- `{ key: value }` | added for JavaScript, Python user
+- hash key | method name | same string (over and over)
+- immutable string | only created once | fast look up
+- string is for data | symbol is for identifier
+- symbol literal starts with `:`
+- value is equivalent to its name
+- frequently used in hashes (as keys)
+- `{ key: value }` | shortcut  for JavaScript, Python user
 
 6.
 
@@ -153,52 +154,66 @@ Set:    2023/05/09 6:34
 End:    2023/05/09 10:04
 ```
 
-- more flexible
-- everything | object
-- instantiate | directly | indirectly
+- everything is an object
+- instantiation can be direct or indirect
 
-1.
+### 1. Defining Classes
 
-- `.new` | memory | uninitialized
-- call | `initialize` | setup
-- `@` | instance variable
-- `p` | `inspect` | internal representation
+- domain concepts | become classes
+- `new` | allocates memory | hold uninitialized object
+- `initialize` | set the state for each object
+- `@` | denote instance variable | part of the name | available to all methods
+- Object's `to_s` default | print `ClassName:object_id` | can override
+- `puts` calls `to_s`
+- `p` calls `inspect`
 
-2.
+### 2. Objects and Attributes
 
-- attribute | externally visible facet
-- accessor method | `def` `@` `end`
-- `attr_reader` | shortcut | symbol
-- update method | `def` `=()` `end`
+- attribute | method for access and manipulate object state (without arguments)
+- `def` `@.` `end` | accessor method
+- `attr_reader` | shortcut | use symbol
+- `def` `.=(.)` `end` | setting method
 - `attr_writer` | shortcut | rare
-- `attr_accessor` | shortcut | combined
+- `attr_accessor` | combined shortcut
+- can have computed attributes
 - hiding the difference | Uniform Access Principle
-- attribute | method | expose | internal state
 
-3.
+### 3. Classes Working with Other Classes
 
-- `<<` | left shift operator | append
-- `require` | standard library
-- `require_relative` | external file
-- `CSV` | `ARGV`
+- `CSV` | `headers: true`
+- `<<` | left shift operator | append to array
+- `require` for library
+- `require_relative` for external file
+- `ARGV` for accessing command-line arguments
 
-4.
+### 4. Specifying Access Control
 
-- coupling | degree of interdependence
-- access control | at run time
-- `public` | `protected` | `private`
-- method | not keyword
+- risk of implementation interdependence | coupling
+- never expose methods that lead to invalid state
+- 3 levels of access control: `public` | `protected` | `private`
+- `public` by anyone | default
+- `protected` only within class or subclass | rare
+- `private` no explicit receiver (always `self`)
+- dynamic access control (not static)
+- can be used on class or module
+- access control is actually a method
+- `def` returns symbol
+- 3 ways of applying access control: `section` | `list` | `direct`
 
-5.
+### 5. Variables
 
-- variable | reference to object
+- keep track of objects | hold references
+- objects float around in a big pool somewhere (heap) | pointed to by variables
 - `class` | `object_id`
-- `dup` | `freeze`
+- `dup` for create new object | duplicate
+- `freeze` for prevent changes | become immutable
 
-6.
+### 6. Reopening Classes
 
-- reopen classes | monkey-patching
-- refinement
+- can reopen class at anytime (monkey-patching) | 3rd party library
+- example: Ruby on Rails | extend core classes
+- do with caution | don't change existing method
+- refinements: Chapter 22
 
 ## 4. Collections, Blocks, and Iterators
 
