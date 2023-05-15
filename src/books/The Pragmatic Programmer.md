@@ -135,6 +135,13 @@ Author: Dave Thomas, Andy Hunt
 
 ## 3. The Basic Tools
 
+- every maker start with a good set of tools
+- tools become extension of maker's hand
+- regularly expand your toolbox with new tools
+- avoid the mistake of relying on a single tool
+- this chapter emphasizes investing in your tools
+- invest your time in learning the tools
+
 ### Topic 16. The Power of Plain Text
 
 - plain text is the best format for storing knowledge
@@ -168,3 +175,6 @@ Author: Dave Thomas, Andy Hunt
 - 3 aliases
 - 4 command completion
 
+### Topic 18. Power Editing
+
+- text editor is an extension of your hand
