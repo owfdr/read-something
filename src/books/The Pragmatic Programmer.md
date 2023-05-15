@@ -129,6 +129,26 @@ Author: Dave Thomas, Andy Hunt
 - internal domain language: RSpec, Phoenix
 - external language: Cucumber, Ansible
 
-## Topic 15. Estimating
+### Topic 15. Estimating
 
 - units: days | weeks | months
+
+## 3. The Basic Tools
+
+### Topic 16. The Power of Plain Text
+
+- plain text is the best format for storing knowledge
+- binary formats often detach data from its context
+- plain text consists of printable characters
+- plain text is understandable to humans
+- plain text doesn't imply lack of structure
+- example: HTML, JSON, YAML | HTTP, SMTP, IMAP
+- plain text insure against obsolescence
+- it will outlive all forms of data, period
+- binary data requires knowledge of the format
+- there is a difference between human-readable and human-understandable
+- virtually every tool can operate on plain text
+- plain text can place under version control
+- (plain text file is center to unix philosophy)
+- plain text for synthetic data simplifies testing
+- plain text will continue be the standard
