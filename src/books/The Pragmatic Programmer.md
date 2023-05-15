@@ -177,4 +177,23 @@ Author: Dave Thomas, Andy Hunt
 
 ### Topic 18. Power Editing
 
-- text editor is an extension of your hand
+- text is the raw material of programming
+- develop fluency in each editor you use
+- 4% improvement can save 1 week per year
+- true benefit lies in fluency without thinking (instinctive)
+- can you do all these without using a mouse?
+- learn the commands that make your life easier
+- if you do something repetitive, find a better way
+- instill it through repetition
+- many editors are extendable
+- search for extensions to overcome limitations
+- try create your own extensions
+- publish your extensions to helps others
+
+#### Challenges
+
+1. no more autorepeat
+1. lose the mouse for a week
+1. look for integrations
+1. built your own extension
+
