@@ -34,10 +34,30 @@ Author: Dave Thomas, Andy Hunt
 - tip 15: single representation no duplication (DRY)
 - tip 16: make it easy to reuse
 
-### Topic 11. Orthogonality
+### Topic 10. Orthogonality
 
 - vector | two lines are independent
 - change in one should not affect the other
+
+## Topic 11. Reversibility
+
+- engineer likes singular answer
+- but value of x will always change
+- avoid myopic belief in a singular solution
+- critical decisions gradually limits options
+- slight change can have catastrophic effect
+- critical decisions are often irreversible
+- committing to a decision is hard to reverse
+- many of our recommendations increases flexibility
+- decisions aren't always optimal on the first attempt
+- abstractions increase flexibility
+- avoid the assumption that decisions are permanent
+- always be prepared for contingencies
+- flexibility is also crucial in architecture and deployment
+- server-side best practices have changed over and over
+- you can't plan for this volatility
+- make it easy to change by abstraction
+- enable your code to be flexible and adaptable
 
 ### Topic 12. Tracer Bullets
 
@@ -108,3 +128,7 @@ Author: Dave Thomas, Andy Hunt
 - Ansible configuration
 - internal domain language: RSpec, Phoenix
 - external language: Cucumber, Ansible
+
+## Topic 15. Estimating
+
+- units: days | weeks | months
