@@ -74,3 +74,27 @@ Author: Dave Thomas, Andy Hunt
 - tracer code shows how to connect different components of an application.
 - prototyping generate disposable code (reconnaissance)
 - trace code becomes the skeleton (fire)
+
+### Topic 13. Prototypes and Post-it Notes
+
+- prototyping is cost-effective (compared to full-scale production)
+- it helps to analyze risks and facilitate corrections
+- post-it notes are great for prototyping
+- prototype can ignore unimportant details
+- use tracer bullet when details cannot be compromised
+- prototype things that carry risk
+- prototype is all about learning (lessons learned)
+- 1 can use dummy data (ignore concreteness)
+- 2 can have limited functionality (ignore completeness)
+- 3 can crash often (ignore robustness)
+- 4 can code clumsily (ignore styles)
+- may implement using high-level languages
+- emphasize appearance in interface prototyping
+- use scripting language to combine low-level components effectively
+- system architecture can be prototyped as well
+- are components well defined and coupling minimized?
+- does every module have access to data when it needs?
+- clearly communicate that code are disposable
+- avoid request for deployment
+- prototype can save significant amount of time
+
