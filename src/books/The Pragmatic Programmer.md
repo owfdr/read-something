@@ -146,9 +146,25 @@ Author: Dave Thomas, Andy Hunt
 - plain text insure against obsolescence
 - it will outlive all forms of data, period
 - binary data requires knowledge of the format
-- there is a difference between human-readable and human-understandable
+- difference between human-readable and human-understandable
 - virtually every tool can operate on plain text
 - plain text can place under version control
 - (plain text file is center to unix philosophy)
-- plain text for synthetic data simplifies testing
-- plain text will continue be the standard
+- data in plain text simplifies testing
+- plain text is always the standard
+
+### Topic 17. Shell Games
+
+- good workbench is essential for woodworkers
+- command shell is the workbench of programmers
+- GUI-oriented programmers may question why
+- missing out on full capabilities
+- GUI capabilities are limited by designers
+- shell can increase productivity significantly
+- invest your time in learning the shell
+- developer should customize their shell
+- 1 color theme
+- 2 prompt
+- 3 aliases
+- 4 command completion
+
