@@ -19,3 +19,7 @@
 - [Mastering Regular Expressions](https://www.amazon.com/Mastering-Regular-Expressions-Jeffrey-Friedl/dp/0596528124)
 
 - [JavaScript: The Definitive Guide](https://www.amazon.com/JavaScript-Definitive-Most-Used-Programming-Language/dp/1491952024)
+
+### Communication
+
+- [Dinosaur Brains: Dealing with All THOSE Impossible People at Work](https://www.amazon.com/Dinosaur-Brains-Dealing-Impossible-People/dp/0345410211)
