@@ -98,3 +98,13 @@ Author: Dave Thomas, Andy Hunt
 - avoid request for deployment
 - prototype can save significant amount of time
 
+### Topic 14. Domain Languages
+
+- computer languages shape your approach
+- pragmatics often use real-world domain language to program
+- RSpec testing
+- Cucumber testing
+- Phoenix routes
+- Ansible configuration
+- internal domain language: RSpec, Phoenix
+- external language: Cucumber, Ansible
