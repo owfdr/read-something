@@ -197,3 +197,31 @@ Author: Dave Thomas, Andy Hunt
 1. look for integrations
 1. built your own extension
 
+### Topic 19. Version Control
+
+- undoing mistakes is crucial to us
+- version control is one giant undo key
+- there is much more to explore
+- both a repository and a central meeting place
+- (avoid sharing source files across networks)
+- version control tracks all the changes you made
+- provides information about changes
+- helps to identify the release version
+- can keep changes in a central repository
+- allow programmers to work concurrently
+- make sure **everything** is under version control
+- you can isolate changes into a branch
+- branch eliminates interference
+- branch are essential to workflows
+- there a thousand ways to do branching
+- pick one that suits you
+- version control shines in team collaboration
+- worth to have a central repository
+- many are open source
+
+#### Challenges
+
+1. do you know all the commands?
+1. can you recover your laptop? (set it up)
+1. explore features
+1. use VCS for non-project
