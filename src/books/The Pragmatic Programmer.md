@@ -305,3 +305,17 @@
 - 4 including equations (LaTeX)
 - 5 index generation
 - Pragmatic Bookshelf itself is built around text manipulation
+
+### Topic 22. Engineering Daybooks
+
+- Dave worked with engineers who carried paper notebooks
+- they often jot down notes during conversations
+- they have been trained to keep an engineering daybook
+- put anything that relates to work in the daybook
+- it has three benefits
+- 1 more reliable than memory
+- 2 place to store ideas
+- 3 acts as a rubber duck
+- can look back what you where doing
+- use paper, not a file or a wiki
+- may become your memoir
