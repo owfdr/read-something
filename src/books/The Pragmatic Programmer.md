@@ -2,13 +2,7 @@
 
 <img alt="book cover" src="https://m.media-amazon.com/images/I/71f743sOPoL.jpg" width="300">
 
-Author: Dave Thomas, Andy Hunt
-
-Edition: 20th Anniversary Edition
-
-Publisher: Addison-Wesley
-
-Link: [Amazon](https://www.amazon.com/Pragmatic-Programmer-journey-mastery-Anniversary/dp/0135957052/)
+[Amazon](https://www.amazon.com/Pragmatic-Programmer-journey-mastery-Anniversary/dp/0135957052/)
 
 ## From the Preface to the First Edition
 
@@ -297,3 +291,17 @@ Link: [Amazon](https://www.amazon.com/Pragmatic-Programmer-journey-mastery-Anniv
 - can you explain the problem to others?
 - are the tests complete enough?
 - can the same bug exists elsewhere?
+
+### Topic 21. Text Manipulation
+
+- pragmatics require a general-purpose text manipulation tool
+- text manipulation language can be powerful if used skillfully
+- popular ones include `awk` and `sed`
+- text manipulation language allows quick prototyping
+- examples of our accomplishment using Ruby and Python
+- 1 building the book (rake tasks)
+- 2 code inclusion and highlighting
+- 3 website update
+- 4 including equations (LaTeX)
+- 5 index generation
+- Pragmatic Bookshelf itself is built around text manipulation
