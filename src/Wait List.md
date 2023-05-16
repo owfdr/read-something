@@ -20,6 +20,8 @@
 
 - [JavaScript: The Definitive Guide](https://www.amazon.com/JavaScript-Definitive-Most-Used-Programming-Language/dp/1491952024)
 
+- [You Don't Know JS](https://www.amazon.com/YOU-DON%60T-KNOW-JS-SET/dp/9352136268)
+
 ### Communication
 
 - [Dinosaur Brains: Dealing with All THOSE Impossible People at Work](https://www.amazon.com/Dinosaur-Brains-Dealing-Impossible-People/dp/0345410211)
