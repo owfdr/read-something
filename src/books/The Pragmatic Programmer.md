@@ -1,6 +1,14 @@
 # The Pragmatic Programmer
 
+<img alt="book cover" src="https://m.media-amazon.com/images/I/71f743sOPoL.jpg" width="300">
+
 Author: Dave Thomas, Andy Hunt
+
+Edition: 20th Anniversary Edition
+
+Publisher: Addison-Wesley
+
+Link: [Amazon](https://www.amazon.com/Pragmatic-Programmer-journey-mastery-Anniversary/dp/0135957052/)
 
 ## From the Preface to the First Edition
 
