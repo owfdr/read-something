@@ -16,7 +16,7 @@
 - tip 1: only craft when you care
 - tip 2: keep a situational awareness
 
-## 1. A Pragmatic Philosophy
+## Chapter 1: A Pragmatic Philosophy
 
 - tip 3: you have the agency
 - tip 4: have responsibility
@@ -30,7 +30,7 @@
 - tip 12: pitch well and gather feedback
 - tip 13: document your code
 
-## 2. A Pragmatic Approach
+## Chapter 2: A Pragmatic Approach
 
 - tip 14: think about easy to change (ETC)
 - tip 15: single representation no duplication (DRY)
@@ -135,7 +135,7 @@
 
 - units: days | weeks | months
 
-## 3. The Basic Tools
+## Chapter 3: The Basic Tools
 
 - every maker start with a good set of tools
 - tools become extension of maker's hand
@@ -319,3 +319,5 @@
 - can look back what you where doing
 - use paper, not a file or a wiki
 - may become your memoir
+
+## Chapter 4: Pragmatic Paranoia
