@@ -321,3 +321,12 @@
 - may become your memoir
 
 ## Chapter 4: Pragmatic Paranoia
+
+- you can't write perfect software (tip 36)
+- it has never been achieved by anyone
+- the solution is to drive defensively
+- similarly, code defensively
+- but pragmatics don't trust themselves either
+- we need to play it safe
+
+## 
