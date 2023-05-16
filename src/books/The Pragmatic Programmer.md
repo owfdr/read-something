@@ -225,3 +225,67 @@ Author: Dave Thomas, Andy Hunt
 1. can you recover your laptop? (set it up)
 1. explore features
 1. use VCS for non-project
+
+### Topic 20. Debugging
+
+- the term "bug" has been used for centuries
+- computers are still limited to doing what you tell them to do
+- debugging is an inevitable part of programming
+- sometimes it can be an emotional subject
+- remember debugging is just problem solving
+- focus on fixing the problem, not the blame
+- first rule: don't panic
+- it is crucial to stay calm
+- don't waste your time on "that's impossible!"
+- avoid addressing only the visible
+- always try to discover the root cause
+- ensure code compiles without warnings
+- gather all relevant data
+- third party report may lack accuracy
+- tempers may raise
+- you may need to interview the user
+- you may need to test brutally
+- reproducibility is key to bug fixing
+- make it reproducible with a single command
+- write failing test before fixing the code
+- read the error message carefully
+- use debugger if it is a bad result
+- verify the incorrect value in the debugger
+- know how to navigate up and down the call stack
+- keep pen and paper nearby
+- may use a binary chop for long stacks
+- when crashes when on a particular dataset
+- binary chop to pinpoint the specific input causing the crash
+- binary chop to identify the specific change introduced the bug
+- binary chop is often known as binary search
+- faster due to divide and conquer (O log n)
+- can also applied to debugging
+- select middle stack to see where the bug arises
+- splitting the dataset to find the cause
+- chopping the release history to find the problem (can be automated)
+- stack trace has limitations in event-based scenarios
+- tracing statements are effective when time is a factor
+- add each statements as you descend down the call tree
+- adhere to a consistent format for automated parsing
+- example: open and close in resource leak
+- explaining a problem to rubber duck can help to identify the cause
+- verbalization leads to new insights
+- the code you are debugging may be a mixture of application code
+- troubleshoot your code first
+- a cautionary tale: "select" isn't broken
+- be cautious with upgrades
+- when surprised by a bug, reevaluate your assumptions
+- prove it until you can find the cause
+- evaluate detection shortcomings, update tests accordingly
+- improve parameter checking if caused by bad data propagation
+- check for other vulnerabilities and then fix them
+- identify ways to make future bug fixes easier
+- discuss the bug with the entire team
+
+#### Debugging Checklist
+
+- is the problem an underlying bug or merely a symptom?
+- is the bug really not in your code?
+- can you explain the problem to others?
+- are the tests complete enough?
+- can the same bug exists elsewhere?
