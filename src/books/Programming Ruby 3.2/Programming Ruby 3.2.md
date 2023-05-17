@@ -223,50 +223,70 @@ Set:    2023/05/09 10:52
 End:    2023/05/10 9:47
 ```
 
-- effective ruby programmer | master array and hash
-- collection + block | powerful iterator
+- most programs deal with collections of data | handled by `array` and `hash`
+- `block` encapsulate chunks of code | powerful iterator constructs
 
-1.
+### 1. Array
 
-- `-1` | negative integer | counts form the end
-- `..` | `...`
-- any gap wil be filled with `nil`
-- `[]` operator | implemented as method
-- `[start, length]`
-- `length = 0` | insert before start
-- `length = 1` | replace element at start
+<!-- stash
 - `[1, 2, 3]` | elements are inserted individually
 - `1, 2, 3` | can also be used in replacement
-- `[from..to]` | range is also allowed
-- `%w` | `%i`
-- stack | `push` | `pop`
-- FIFO queue | `push` | `shift`
+-->
 
-2.
+- hold collection of references | identified by index
+- `[., ., .,]` array literal
+- `Array.new`, `[]` | create empty array
+- returns `nil` if nothing is there
+- `-.` counts form the end
+- `[]` | implemented as instance method | equivalent to `.[]()`
+- `[start, count]` count number of objects from start
+- `[..]` range includes end position | `[...]` range excludes end position
+- `[]=`, `.[]=()` | gaps will be filled with `nil`
+- `[start, 0]=` inserted before start
+- `[start, n]=` replaced from start
+- `%w` shortcut | create strings array (words)
+- `%i` shortcut | create symbols array (intern)
+- as stack: `push`, `pop`
+- as FIFO queue: `push`, `shift`
+- `first()` return n entries at head | default: 1
+- `last()` return n entries at end | default: 1
 
-- hash | associative array | map | dictionary
-- keys are hashed | hashing function
-- `=>` | hash rocket
-- `{name:, age:}` | shortcut
-- advantage | use object as index | remembers the order
+### 2. Hashes
 
-3.
+- called: associative array, map, dictionary
+- also collection of references | similar to array
+- index (key) can be any type | often symbols or strings
+- hashing function | convert keys
+- `{ key => value }` hash literal
+- `{ key: value }` shortcut | key is symbol
+- `{ variable: }` shortcut | key is variable name
+- `=>` hash rocket
+- key can be any object | remembers the order
+- more methods: Chapter 5
 
-- `dig` | returns nill instead of an expiation
+### 3. Digging
 
-4.
+- data can be nested
+- `dig` | defined for `array`, `hash`, `struct`
+- returns `nil` instead of an exception
 
-- word frequency | array + hash
-- `sort_by`
-- `reverse_each`
-- `minitest/autorun` | `Minitest::Test`
-- `tally`
+### 4. Word Frequency: Using Hashes and Arrays
 
-5.
+- `scan(/./)` use regex | return array
+- `has_key?` check if contains key
+- `Hash.new(.)` set default value
+- `sort_by` rearrange by criterion
+- `reverse_each` iterate in reverse
+- `Minitest` light weight testing framework
+- `assert_equal` compare two values
+- `tally` count occurrences
 
-- `each` | iterator | invokes a block of code repeatedly
-- `map` | enumerator method | returns a new array
-- `tap` | for debugging
+### 5. Blocks and Enumeration
+
+- iterator | design pattern
+- enumerator | implementation of iterator design
+- `map` transform each element
+- `tap` perform operations for debugging
 
 6.
 
@@ -349,12 +369,12 @@ End:    2023/05/10 19:28
 - redefine method | can be dangerous
 - endless method | `() =`
 - no body method | `; end`
-- capitalized method name | `Kernel` module | `Integer`
+- capitalized method name | `Integer` | `Kernel` module
 - can end with `?` `!` `=`
 - `?` return boolean result | predicate methods
 - `!` will modify receiver | bang methods | often pared with safe version
 - `=` used for assignment
-- set of operators can be overridden | `+`
+- some operators can be overridden | e.g. `+`
 - define method for specific object | `def self.method` | `def object.method`
 - omit `()` no args | otherwise use `()`
 - `=` | default value | can reference previous args
