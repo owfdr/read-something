@@ -41,7 +41,7 @@
 - vector | two lines are independent
 - change in one should not affect the other
 
-## Topic 11. Reversibility
+### Topic 11. Reversibility
 
 - engineer likes singular answer
 - but value of x will always change
@@ -328,5 +328,3 @@
 - similarly, code defensively
 - but pragmatics don't trust themselves either
 - we need to play it safe
-
-## 
