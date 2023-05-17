@@ -24,4 +24,49 @@
 
 ## Chapter 1 - Introduction
 
+1. why no clearly defined career path?
+2. no clear definition
+3. scope of the field (Figure 1-1)
+4. expanding role
+5. dynamic problem (non-static)
+6. outdated solutions
+7. in need of reassessment
+8. must study in context
 
+### Defining Software Architecture
+
+1. roadmap or blueprint? | what does it actually contains?
+2. structure refers to architecture style (microkernel, microservices) | incomplete
+3. characteristics refers to architecture quality | distinct from functionality
+4. decisions represents rules of constructions | what is allowed and what is not
+5. rules can be broken through variance | ARB
+6. principles are guidelines rather than hard rules
+
+> architecture | structure + characteristics, decisions + principles (Figure 1-2)
+
+### Expectations of an Architect
+
+1. emphasis on expectations rather than role
+2. eight core expectations
+    - make decisions
+    - continually analyze
+    - keep with trends
+    - ensure compliance
+    - diverse experience
+    - business domain knowledge
+    - interpersonal skills
+    - navigate politics
+3. succuss requires meeting these expectations
+
+#### Make Architecture Decisions
+
+1. purpose: guide your team
+2. guide rather than specify (reactive-based framework vs. React.js)
+3. help teams make the right choices | there is a line
+
+#### Continually Analyze the Architecture
+
+1. purpose: make improvements
+2. avoid structural decay
+3. don't overlook testing and release environments | agility
+4. requires holistic analysis
