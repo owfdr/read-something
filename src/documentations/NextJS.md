@@ -148,3 +148,106 @@ use custom hooks | - | ✅ |
 use react class components | - | ✅ |
 
 ### Patterns
+
+#### Moving Client Components to the Leaves
+
+- move interactive logic to client component
+- keep layouts as server component
+
+#### Composing Client and Server Components
+
+- can coexist in component tree
+- server renders server components, skips client components
+- client renders client components, then slot into rendered server components
+
+##### Good to know
+
+- both server and client components are pre-rendered on the server initially
+- produce faster page load
+
+##### Nesting Server Components inside Client Components
+
+- one restriction exists
+- cannot import server components into client component directly
+- recommended: pass server component as props (`children`)
+- each can be rendered independently (decoupled)
+
+##### Good to know
+
+- already applied in `layouts` and `pages`
+- passing components as props is not a new concept
+- component receives prop without knowledge of its content
+  - allows prop to be rendered independently (on the server)
+  - same as "lifting content up" strategy (minimize re-rendering)
+- any prop can be used to pass JSX
+
+#### Passing props from Server to Client Components (Serialization)
+
+- must be serializable (exclude functions, dates, etc)
+
+##### Where is the Network Boundary?
+
+- App Router: between server components and client components
+- Page Router: between `getStaticProps`/`getServerSideProps` and page components
+- data fetched in server components do not need to be serialized
+
+#### Keeping Server-Only Code out of Client Components (Poisoning)
+
+- at first, `getData` seems to be work on both sides
+- however, `API_KEY` is note prefixed with `NEXT_PUBLIC` (private)
+- next.js replaces private env variable with empty string
+- it can only run on the server side
+
+##### The "server only" package
+
+- prevents accidental import on the client component
+
+Terminal
+
+```bash
+npm install server-only
+```
+- import `server-only` into server only module
+- corresponding `client-only` marks client only module
+
+#### Data Fetching
+
+- recommended: fetch data in server components
+
+#### Third-party packages
+
+- can wrap third-party components with `"use client"` directive
+- often required by provider components
+
+##### Library Authors
+
+- can use `"use client"` to mark client entry point
+- can use it deeper in the tree
+- make sure bundler will include `"use client"` (may get stripped)
+
+### Context
+
+- most app use context to share data
+- context is fully supported in client components
+- context can't be used in server components (have no state)
+
+#### Using context in Client Components
+
+- create context at root will cause error
+- instead, create context with its provider inside a client component
+- render providers as deep as possible (optimization)
+
+#### Rendering third-party context providers in Server Components
+
+- wrap third-party providers in your own client component
+
+#### Sharing data between Server Components
+
+- context sharing is unavailable in server components
+- can use global singletons pattern
+
+#### Sharing fetch requests between Server Components
+
+- recommended: fetch directly inside component
+- fetch request are automatically deduplicated and cached
+- avoids unnecessary props coupling
