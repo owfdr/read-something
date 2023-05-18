@@ -39,9 +39,12 @@ output_file += ".txt" if output_file.end_with?(".txt") == false
 do_list = []
 memorize_list = []
 
+do_pattern = /^\*\*`?Do:`?\*\*\s*/
+mx_pattern = /^\*\*`?Mz:`?\*\*\s*/
+
 File.foreach(input_file) do |line|
-    do_list << line.gsub("**`Do:`**", "") if line.start_with?("**`Do:`**")
-    memorize_list << line.gsub("**`Mz:`**", "") if line.start_with?("**`Mz:`**")
+    do_list << line.gsub(do_pattern, " ") if line.match?(do_pattern)
+    memorize_list << line.gsub(mx_pattern, " ") if line.match?(mx_pattern)
 end
 
 File.open(output_file, "w") do |output|
@@ -53,3 +56,5 @@ File.open(output_file, "w") do |output|
     output.puts("Memorize:")
     output.puts(memorize_list)
 end
+
+puts "Extraction successful!"
