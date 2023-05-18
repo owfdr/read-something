@@ -128,3 +128,42 @@
 #### Understand and Navigate Politics
 
 **Mz:** Every decision you make will be challenged
+
+### Intersection of Architecture and...
+
+**Mz:** Pets.com's burst (2000) and Elastic scale
+
+#### Engineering Practices
+
+<!-- - **Mz:** Process means how people organize and interact -->
+<!-- - **Mz:** Flavors of agile includes scrum, Xp, lean and crystal -->
+<!-- **Mz:** All architecture become iterative because of unknown unknowns -->
+<!-- **Mz:** Practice is not process   -->
+<!-- **Mz:** architectural style and engineering practices should from a symbiotic mesh   -->
+<!-- **Do:** Build evolutionary architecture -->
+
+**Do:** Ensure alignment between practices and architectural style
+
+<!-- 1. Traditionally, software architecture and development process were a separate concern
+2. Recent engineering advances have brought process concerns to software architecture
+3. Due to unknown unknowns, focusing on engineering practices is crucial in software development
+4. Unknown unknowns pose significant challenges to software systems. 
+5. An iterative process aligns better with the nature of software architecture.
+6. The architectural style and engineering practices should harmonize. -->
+
+#### Operations/DevOps
+
+**Do:** Collaborate with operations team
+
+#### Process
+
+**Do:** Adopt agile methodology
+
+#### Data
+
+**Mz:** Date storage is also an important aspect
+
+### Laws of Software Architecture
+
+**Mz:** 1. Everything in software architecture is a trade-off  
+**Mz:** 2. Why is more important than how
