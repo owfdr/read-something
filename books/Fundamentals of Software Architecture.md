@@ -172,7 +172,7 @@
 <!-- **`Mz:`** 1. Everything in software architecture is a trade-off   -->
 <!-- **`Mz:`** 2. Why is more important than how  -->
 
-**`Do:`** Think architecture in terms of trade-offs, and explain why
+**`Do:`** Think architecture in terms of trade-offs
 
 ## Chapter 2 - Architecture Thinking
 
@@ -182,7 +182,7 @@
 
 <!-- **`Mz:`** Design and architecture must kept in sync -->
 
-**`Do:`** Team up with developers and provide mentorship
+**`Do:`** Team up with developers and mentor them
 
 ### Technical Breadth
 
@@ -206,10 +206,38 @@
 
 **`Mz:`** Every architect should code
 
-**`Do:`** 1. POCs to validate architecture (with quality code)
+**`Do:`** Employ POCs to validate architecture (with quality code)
 
-**`Do:`** 2. Automation tools
+**`Do:`** Write automation tools
 
-**`Do:`** 3. Code reviews
+**`Do:`** Review code
 
-**`Do:`** 4. Don't be a bottleneck
+**`Do:`** Don't be a bottleneck
+
+## Chapter 3 - Modularity
+
+**`Do:`** Understand modularity
+
+1. no clear definition for "modularity"
+2. understanding modularity is crucial to architects
+3. modularity is an organizing principle
+3. energy must be exerted to prevent disorder (entropy)
+
+### Definition
+
+**`Mz:`** Modularity: grouping of related code
+
+1. modularity refers to grouping of related code into a unit
+2. modern languages offer diverse packaging mechanisms
+3. architects need to understand how developers package components
+4. concept of modular languages became packages and namespaces
+5. modularity in architecture refers to logical grouping of code (not physical)
+6. namespaces provide a way to organize software assets
+7. Java originally introduced a package namespace mechanism to avoid name conflicts
+
+### Measuring Modularity
+
+1. researchers created various metrics help to understand modularity
+2. three key concepts: cohesion, coupling and connascence
+
+#### Cohesion
