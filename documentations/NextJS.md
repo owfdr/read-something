@@ -35,6 +35,135 @@
 - GitHub Discussion
 - Discord, Twitter, Reddit
 
+## Project Structure
+
+- overview of files and folder structure
+
+### Top-level files
+
+Next.js
+
+- `next.config.js` configuration file for Next.js
+- `middleware.ts` Next.js's request middleware
+- `.env` environment variables
+- `.env.local` local environment variables
+- `.env.production` production environment variables
+- `.env.development` development environment variables
+- `.next-env.d.ts` typescript declaration file for Next.js
+
+Ecosystem
+
+- `package.json` project dependencies and scripts
+- `.gitignore` git files and folders to ignore
+- `tsconfig.json` configuration file for typescript
+- `jsconfig.json` configuration file for javascript
+- `eslint.json` configuration file for eslint
+
+### Top-level folders
+
+- `app` app router
+- `pages` pages router
+- `public` static assets to be served
+- `src` optional application source folder
+ 
+### "app" Routing Conventions
+
+#### Routing Files
+
+- `layout` layout
+- `page` page
+- `loading` loading UI
+- `not-found` not found UI
+- `error` error UI
+- `global-error` global error UI
+- `route` api endpoint
+- `template` re-rendered layout
+- `default` parallel route fallback page
+
+#### Nested Routes
+
+- `folder` route segment
+- `folder/folder` nested route segment
+
+#### Dynamic Routes
+
+- `[folder]` dynamic route segment
+- `[...folder]` catch-all segments
+- `[[...folder]]` optional catch-all segments
+
+#### Route Groups and Private Folders
+
+- `(folder)` group routes without affecting routing
+- `_folder` opt folder and all child segments out of routing
+
+#### Parallel and Intercepted Routes
+
+- `@folder` named slot
+- `(.)folder` intercept same level
+- `(..)folder` intercept one level above
+- `(..)(..)folder` intercept two levels above
+- `(...) folder` intercept from root
+
+#### Metadata File Conventions
+
+##### App Icons
+
+- `favicon` | `.ico` | favicon file
+- `icon` | `.png` `.svg` | app icon file
+- `icon` | `.ico` `.jpg` `.jpeg` `.png` `.svg` | generated app icon
+- `apple-icon` | `.jpg` `.jpeg` `.png` | apple app icon file
+- `apple-icon` | `.js` `.ts` `.tsx` | generated apple app icon
+
+##### Open Graph and Twitter Images
+
+- `opengraph-image` | `.jpg` `.jpeg` `.png` `.gif` | Open Graph image file
+- `opengraph-image` | `.js` `.ts` `.tsx` | Generated Open Graph image
+- `twitter-image` | `.jpg` `.jpeg` `.png` `.gif` | Twitter image file
+- `twitter-image` | `.js` `.ts` `.tsx` | Generated Twitter image
+
+##### SEO
+
+- sitemap | `.xml` | sitemap file
+- sitemap | `.js` `.ts` `.tsx` | generated sitemap
+- robots | `.txt` | robots file
+- robots | `.js` `.ts` | generated robots file
+
+### "pages" Routing Conventions
+
+#### Special Files
+
+- `_app` custom app
+- `_document` custom document
+- `_error` custom error page
+- `404` 404 error page
+- `500` 500 error page
+
+#### Routes
+
+Folder convention
+
+- `index` home page
+- `folder/index` nested page
+
+File convention
+
+- `tsx` home page
+- `tsx` nested page
+
+#### Dynamic Routes
+
+Folder convention
+
+- `[folder]/index` dynamic route segment
+- `[...folder]/index` catch-all segments
+- `[[...folder]]/index` optional catch-all segments
+
+File convention
+
+- `[file]` dynamic route segment
+- `[...file]` catch-all segments
+- `[[...file]]` optional catch-all segments
+
 ## Installation
 
 - Node.js 16.8 or later
