@@ -202,14 +202,17 @@ package.json
 - `start`: start production server
 - `lint`: set up eslint
 
-#### Create the app folder
+#### Create the "app" folder
 
 - create `app/layout.tsx` (automatically with `next dev`)
 - create `app/page.tsx`
 
-#### Create the public folder
+#### Create the "public" folder
 
-- create `public` to store static assets
+- create `public` to store static assets (optional)
+- can be referenced from the base URL (`/`)
+
+**`Mz:`** `public` files can be referenced from the base URL (`/`)
 
 ### Run the Development Server
 
@@ -219,6 +222,8 @@ Terminal
 npm run dev
 ```
 
+- visit `http://localhost:3000`
+
 ## React Essentials
 
 - difference between client and server components
@@ -226,68 +231,74 @@ npm run dev
 
 ### Server Components
 
-- achieve the best of both worlds
+- combine the best of both worlds
 
 #### Thinking in Server Components
 
-- leverage both server and client based on purpose
-- non-interactive UI | server components
-- interactive UI | client components
+- leverage both server and client rendering
+- server components for non-interactive UI
+- client components for interactive UI
+- server-fist approach (Next.js)
 
 #### Why Server Components?
 
-- leverage server infrastructure
 - minimize bundle size
-- asynchronous data loading
-- all are server components by default
-- `"use client"` to opt-in client component
+- enables asynchronous data loading
+- all server components by default (App Router)
+- `"use client"` to opt-in
 
 ### Client Components
 
 - enables interactivity
 - pre-rendered on the server | hydrated on the client
 
+**`Mz:`** Client components are pre-rendered and hydrated later
+
 #### The "use client" directive
 
-- placed at the very top (before any imports)
-- all imports became part of client bundle
+- must be placed at the top (before any imports)
+- all imported modules become part of the client bundle
+
+**`Mz:`** Add client component with `"use client"`
 
 ##### Good to know
 
 1. server components: exclusively rendered on the server
 2. client components: can be pre-rendered and hydrated
-3. `"use client"`: must be at the top of a file | no need to be in every file
+3. `"use client"`: does no need to be defined in every file
 
 ### When to use Server and Client Components?
 
-- start with server components unless there is a specific need
+- always start with server components
 
 Table
 
-What you need? | Server Components | Client Components |
---- | --- | --- |
-fetch data | ✅ | - |
-access backend resources | ✅ | - |
-keep sensitive information on server | ✅ | - |
-keep large dependencies on server | ✅ | - |
-add interactively and event listeners | - | ✅ |
-use state and lifecycle | - | ✅ |
-use browser-only APIs | - | ✅ |
-use custom hooks | - | ✅ |
-use react class components | - | ✅ |
+| What you need?                        | Server Components | Client Components |
+| ------------------------------------- | ----------------- | ----------------- |
+| fetch data                            | ✅                 | -                 |
+| access backend resources              | ✅                 | -                 |
+| keep sensitive information on backend | ✅                 | -                 |
+| keep large dependencies on backend    | ✅                 | -                 |
+| add interactively and event listeners | -                 | ✅                 |
+| use state and lifecycle               | -                 | ✅                 |
+| use browser-only APIs                 | -                 | ✅                 |
+| use custom hooks                      | -                 | ✅                 |
+| use react class components            | -                 | ✅                 |
+
+**`Do:`** Start with server components
 
 ### Patterns
 
 #### Moving Client Components to the Leaves
 
-- move interactive logic to client component
-- keep layouts as server component
+- cut down client components by moving them to leaves
+- layouts should use server component
 
 #### Composing Client and Server Components
 
-- can coexist in component tree
-- server renders server components, skips client components
-- client renders client components, then slot into rendered server components
+- can coexist in the same component tree
+- server, renders server components, skip client components
+- client, renders client components, slot in server components
 
 ##### Good to know
 
@@ -296,14 +307,16 @@ use react class components | - | ✅ |
 
 ##### Nesting Server Components inside Client Components
 
-- one restriction exists
+- import restriction:
 - cannot import server components into client component directly
-- recommended: pass server component as props (`children`)
+- pass server component as props (`children`)
 - each can be rendered independently (decoupled)
+
+**`Do:`** client-jsx - (<>) -> server-jsx | server-jsx - (prop) -> client-jsx
 
 ##### Good to know
 
-- already applied in `layouts` and `pages`
+- applied in `layouts` and `pages` already
 - passing components as props is not a new concept
 - component receives prop without knowledge of its content
   - allows prop to be rendered independently (on the server)
@@ -312,7 +325,9 @@ use react class components | - | ✅ |
 
 #### Passing props from Server to Client Components (Serialization)
 
-- must be serializable (exclude functions, dates, etc)
+- props must be serializable (not functions, Dates, ...)
+
+**`Do:`** Pass only serializable props form server to client
 
 ##### Where is the Network Boundary?
 
@@ -325,11 +340,12 @@ use react class components | - | ✅ |
 - at first, `getData` seems to be work on both sides
 - however, `API_KEY` is note prefixed with `NEXT_PUBLIC` (private)
 - next.js replaces private env variable with empty string
-- it can only run on the server side
+- thus, it can only run on the server side
 
 ##### The "server only" package
 
 - prevents accidental import on the client component
+- gives build-time error
 
 Terminal
 
@@ -339,24 +355,28 @@ npm install server-only
 - import `server-only` into server only module
 - corresponding `client-only` marks client only module
 
+**`Do:`** Apply `server-only` / `client-only` to limit module usage
+
 #### Data Fetching
 
 - recommended: fetch data in server components
 
 #### Third-party packages
 
-- can wrap third-party components with `"use client"` directive
-- often required by provider components
+- wrap third-party components with `"use client"` when used within server components
+- provider components often require this
 
 ##### Library Authors
 
-- can use `"use client"` to mark client entry point
-- can use it deeper in the tree
-- make sure bundler will include `"use client"` (may get stripped)
+- use `"use client"` to mark client entry point
+- use it deeper in the tree for optimization
+- configure your bundler to retain `"use client"` (may get stripped)
+
+**`Do:`** check `"use client"` is included in the bundled file
 
 ### Context
 
-- most app use context to share data
+- most app rely on context to share data
 - context is fully supported in client components
 - context can't be used in server components (have no state)
 
@@ -366,17 +386,25 @@ npm install server-only
 - instead, create context with its provider inside a client component
 - render providers as deep as possible (optimization)
 
+Note
+
+- render providers as deep as possible
+
+**`Do:`** Create context inside client components
+
 #### Rendering third-party context providers in Server Components
 
-- wrap third-party providers in your own client component
+- wrap third-party providers in your client component (`"use client"` will be declared)
 
 #### Sharing data between Server Components
 
-- context sharing is unavailable in server components
-- can use global singletons pattern
+- context sharing is not necessary in server components
+- use global singletons instead
+
+**`Do:`** Use singletons to share data in server components
 
 #### Sharing fetch requests between Server Components
 
 - recommended: fetch directly inside component
-- fetch request are automatically deduplicated and cached
+- `fetch` request are automatically deduplicated and cached
 - avoids unnecessary props coupling
