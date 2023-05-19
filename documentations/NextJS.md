@@ -212,7 +212,7 @@ package.json
 - create `public` to store static assets (optional)
 - can be referenced from the base URL (`/`)
 
-**`Mz:`** `public` files can be referenced from the base URL (`/`)
+**`Mz:`** Files in `public` can be referenced by (`/`)
 
 ### Run the Development Server
 
@@ -252,14 +252,14 @@ npm run dev
 - enables interactivity
 - pre-rendered on the server | hydrated on the client
 
-**`Mz:`** Client components are pre-rendered and hydrated later
+**`Mz:`** Client components are pre-rendered and then hydrated
 
 #### The "use client" directive
 
 - must be placed at the top (before any imports)
 - all imported modules become part of the client bundle
 
-**`Mz:`** Add client component with `"use client"`
+**`Mz:`** Specify client component with `"use client"`
 
 ##### Good to know
 
@@ -285,7 +285,7 @@ Table
 | use custom hooks                      | -                 | ✅                 |
 | use react class components            | -                 | ✅                 |
 
-**`Do:`** Start with server components
+**`Do:`** Use server components when possible
 
 ### Patterns
 
@@ -312,7 +312,7 @@ Table
 - pass server component as props (`children`)
 - each can be rendered independently (decoupled)
 
-**`Do:`** client-jsx - (<>) -> server-jsx | server-jsx - (prop) -> client-jsx
+**`Do:`** Pass server component as props to client component
 
 ##### Good to know
 
@@ -355,7 +355,7 @@ npm install server-only
 - import `server-only` into server only module
 - corresponding `client-only` marks client only module
 
-**`Do:`** Apply `server-only` / `client-only` to limit module usage
+**`Do:`** Apply `server-only` / `client-only` to limit usage
 
 #### Data Fetching
 
@@ -372,7 +372,7 @@ npm install server-only
 - use it deeper in the tree for optimization
 - configure your bundler to retain `"use client"` (may get stripped)
 
-**`Do:`** check `"use client"` is included in the bundled file
+**`Do:`** Check is `"use client"` included in the bundle file
 
 ### Context
 
