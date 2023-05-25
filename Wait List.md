@@ -25,3 +25,8 @@
 ### Communication
 
 - [Dinosaur Brains: Dealing with All THOSE Impossible People at Work](https://www.amazon.com/Dinosaur-Brains-Dealing-Impossible-People/dp/0345410211)
+
+
+### Marketing & Sales
+
+- [Crossing the Chasm, 3rd Edition](https://www.amazon.com/Crossing-Chasm-3rd-Disruptive-Mainstream/dp/0062292986)
